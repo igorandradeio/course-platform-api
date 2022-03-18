@@ -11,9 +11,9 @@ class ModuleController extends Controller
 {
     protected $repository;
 
-    public function __construct(ModuleRepository $ModuleRepository)
+    public function __construct(ModuleRepository $moduleRepository)
     {
-        $this->repository = $ModuleRepository;
+        $this->repository = $moduleRepository;
     }
 
     public function index($courseId)
