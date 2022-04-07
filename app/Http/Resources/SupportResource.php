@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use phpDocumentor\Reflection\Types\Resource_;
 
 class SupportResource extends JsonResource
 {
@@ -18,6 +19,8 @@ class SupportResource extends JsonResource
             'status' => $this->status,
             'status_label' => $this->statusOptions[$this->status],
             'description' => $this->description,
+            'user' => new UserResource($this->user),
+            'lesson' => new LessonResource($this->lesson),
         ];
     }
 }
